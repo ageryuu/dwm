@@ -86,8 +86,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_minus,  defaultgaps,    {0} },
 	{ MODKEY,                       XK_y,      incrihgaps,     {.i = +1 } },
 	{ MODKEY,                       XK_o,      incrihgaps,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_y,  incrivgaps,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_o,  incrivgaps,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_y,      incrivgaps,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_o,      incrivgaps,     {.i = -1 } },
 	{ MODKEY|Mod1Mask,              XK_equal,  incrohgaps,     {.i = +1 } },
 	{ MODKEY|Mod1Mask,              XK_minus,  incrohgaps,     {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_equal,  incrovgaps,     {.i = +1 } },
@@ -116,7 +116,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-        TAGKEYS(                        XK_KP_End,                    0)
+    TAGKEYS(                        XK_KP_End,                    0)
 	TAGKEYS(                        XK_KP_Down,                   1)
 	TAGKEYS(                        XK_KP_Page_Down,              2)
 	TAGKEYS(                        XK_KP_Left,                   3)
