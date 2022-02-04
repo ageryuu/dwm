@@ -80,8 +80,6 @@ static Key keys[] = {
 	// Vanitygaps
 	{ Mod1Mask,                     XK_h,      incrgaps,       {.i = +1 } },
 	{ Mod1Mask,                     XK_l,      incrgaps,       {.i = -1 } },
-	{ Mod1Mask|MODKEY,              XK_h,      incrgaps,       {.i = +1 } },
-	{ Mod1Mask|MODKEY,              XK_l,      incrgaps,       {.i = -1 } },
 	{ Mod1Mask|ShiftMask,           XK_h,      incrogaps,      {.i = +1 } },
 	{ Mod1Mask|ShiftMask,           XK_l,      incrogaps,      {.i = -1 } },
 	{ Mod1Mask|ControlMask,         XK_h,      incrigaps,      {.i = +1 } },
