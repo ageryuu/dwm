@@ -3,10 +3,10 @@
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 15;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 15;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 15;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 15;       /* vert outer gap between windows and screen edge */
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -78,22 +78,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	// Vanitygaps
-	{ MODKEY,                       XK_minus,  incrgaps,       {.i = +1 } }, // increase all gaps
-	{ MODKEY,                       XK_equal,  incrgaps,       {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_h,      incrogaps,      {.i = +1 } }, // increase outer gaps
-	{ MODKEY|ShiftMask,             XK_l,      incrogaps,      {.i = -1 } },
-	{ MODKEY|ControlMask,           XK_h,      incrigaps,      {.i = +1 } }, // increase inner gaps
-	{ MODKEY|ControlMask,           XK_l,      incrigaps,      {.i = -1 } }, 
-	{ Mod1Mask,                     XK_0,      togglegaps,     {0} },
-	{ Mod1Mask|ShiftMask,           XK_0,      defaultgaps,    {0} },
-	{ MODKEY,                       XK_y,      incrihgaps,     {.i = +1 } }, // increase inner horizontal gaps
-	{ MODKEY,                       XK_o,      incrihgaps,     {.i = -1 } },
-	{ MODKEY|ControlMask,           XK_y,      incrivgaps,     {.i = +1 } }, // increase inner vertical gaps
-	{ MODKEY|ControlMask,           XK_o,      incrivgaps,     {.i = -1 } },
-	{ Mod1Mask|MODKEY,              XK_y,      incrohgaps,     {.i = +1 } }, // increase outer horizontal gaps
-	{ Mod1Mask|MODKEY,              XK_o,      incrohgaps,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } }, // increase outer vertical gaps
-	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_h,      incrgaps,       {.i = +1 } }, // increase all gaps
+	{ MODKEY|ShiftMask,             XK_l,      incrgaps,       {.i = -1 } },
+	{ MODKEY,                       XK_minus,  togglegaps,     {0} },
+	{ Mod1Mask|ShiftMask,           XK_equal,  defaultgaps,    {0} },
 	// Vanitygaps
 	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
