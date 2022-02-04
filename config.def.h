@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -95,15 +95,15 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-        TAGKEYS(                        XK_KP_End,                    0)
-	TAGKEYS(                        XK_KP_Down,                   1)
-	TAGKEYS(                        XK_KP_Page_Down,              2)
-	TAGKEYS(                        XK_KP_Left,                   3)
-	TAGKEYS(                        XK_KP_Begin,                  4)
-	TAGKEYS(                        XK_KP_Right,                  5)
-	TAGKEYS(                        XK_KP_Home,                   6)
-	TAGKEYS(                        XK_KP_Up,                     7)
-	TAGKEYS(                        XK_KP_Page_Up,                8)
+    TAGKEYS(                        XK_KP_End,                 0 )
+	TAGKEYS(                        XK_KP_Down,                1 )
+	TAGKEYS(                        XK_KP_Page_Down,           2 )
+	TAGKEYS(                        XK_KP_Left,                3 )
+	TAGKEYS(                        XK_KP_Begin,               4 )
+	TAGKEYS(                        XK_KP_Right,               5 )
+	TAGKEYS(                        XK_KP_Home,                6 )
+	TAGKEYS(                        XK_KP_Up,                  7 )
+	TAGKEYS(                        XK_KP_Page_Up,             8 )
 };
 
 /* button definitions */
@@ -122,4 +122,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
