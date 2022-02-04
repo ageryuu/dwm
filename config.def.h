@@ -77,22 +77,24 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|Mod1Mask,              XK_h,      incrgaps,       {.i = +1 } },
-	{ MODKEY|Mod1Mask,              XK_l,      incrgaps,       {.i = -1 } },
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_h,      incrogaps,      {.i = +1 } },
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_l,      incrogaps,      {.i = -1 } },
-	{ MODKEY|Mod1Mask|ControlMask,  XK_h,      incrigaps,      {.i = +1 } },
-	{ MODKEY|Mod1Mask|ControlMask,  XK_l,      incrigaps,      {.i = -1 } },
-	{ MODKEY|Mod1Mask,              XK_0,      togglegaps,     {0} },
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
-	{ MODKEY,                       XK_y,      incrihgaps,     {.i = +1 } },
-	{ MODKEY,                       XK_o,      incrihgaps,     {.i = -1 } },
-	{ MODKEY|ControlMask,           XK_y,      incrivgaps,     {.i = +1 } },
-	{ MODKEY|ControlMask,           XK_o,      incrivgaps,     {.i = -1 } },
-	{ MODKEY|Mod1Mask,              XK_y,      incrohgaps,     {.i = +1 } },
-	{ MODKEY|Mod1Mask,              XK_o,      incrohgaps,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
+	// Vanitygaps
+	{ Mod1Mask,                     XK_h,      incrgaps,       {.i = +1 } }, // increase all gaps
+	{ Mod1Mask,                     XK_l,      incrgaps,       {.i = -1 } },
+	{ Mod1Mask|ShiftMask,           XK_h,      incrogaps,      {.i = +1 } }, // increase outer gaps
+	{ Mod1Mask|ShiftMask,           XK_l,      incrogaps,      {.i = -1 } },
+	{ Mod1Mask|ControlMask,         XK_h,      incrigaps,      {.i = +1 } }, // increase inner gaps
+	{ Mod1Mask|ControlMask,         XK_l,      incrigaps,      {.i = -1 } }, 
+	{ Mod1Mask,                     XK_0,      togglegaps,     {0} },
+	{ Mod1Mask|ShiftMask,           XK_0,      defaultgaps,    {0} },
+	{ Mod1Mask,                     XK_y,      incrihgaps,     {.i = +1 } }, // increase inner horizontal gaps
+	{ Mod1Mask,                     XK_o,      incrihgaps,     {.i = -1 } },
+	{ Mod1Mask|ControlMask,         XK_y,      incrivgaps,     {.i = +1 } }, // increase inner vertical gaps
+	{ Mod1Mask|ControlMask,         XK_o,      incrivgaps,     {.i = -1 } },
+	{ Mod1Mask|MODKEY,              XK_y,      incrohgaps,     {.i = +1 } }, // increase outer horizontal gaps
+	{ Mod1Mask|MODKEY,              XK_o,      incrohgaps,     {.i = -1 } },
+	{ Mod1Mask|ShiftMask,           XK_y,      incrovgaps,     {.i = +1 } }, // increase outer vertical gaps
+	{ Mod1Mask|ShiftMask,           XK_o,      incrovgaps,     {.i = -1 } },
+	// Vanitygaps
 	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_z,      zoom,           {0} },
