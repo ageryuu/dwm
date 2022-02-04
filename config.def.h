@@ -84,8 +84,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      incrogaps,      {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_h,      incrigaps,      {.i = +1 } }, // increase inner gaps
 	{ MODKEY|ControlMask,           XK_l,      incrigaps,      {.i = -1 } }, 
-	{ MODKEY,                       XK_0,      togglegaps,     {0} },
-	{ MODKEY|ShiftMask,             XK_0,      defaultgaps,    {0} },
+	{ Mod1Mask,                     XK_0,      togglegaps,     {0} },
+	{ Mod1Mask|ShiftMask,           XK_0,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_y,      incrihgaps,     {.i = +1 } }, // increase inner horizontal gaps
 	{ MODKEY,                       XK_o,      incrihgaps,     {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_y,      incrivgaps,     {.i = +1 } }, // increase inner vertical gaps
