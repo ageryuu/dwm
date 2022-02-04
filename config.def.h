@@ -18,7 +18,7 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
+	/*               fg         bg         border  */ 
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
@@ -78,10 +78,24 @@ static Key keys[] = {
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	// Vanitygaps
-	{ MODKEY|ShiftMask,             XK_h,      incrgaps,       {.i = +1 } }, // increase all gaps
-	{ MODKEY|ShiftMask,             XK_l,      incrgaps,       {.i = -1 } },
-	{ MODKEY,                       XK_minus,  togglegaps,     {0} },
-	{ Mod1Mask|ShiftMask,           XK_equal,  defaultgaps,    {0} },
+	{ Mod1Mask,                     XK_h,      incrgaps,       {.i = +1 } },
+	{ Mod1Mask,                     XK_l,      incrgaps,       {.i = -1 } },
+	{ Mod1Mask|MODKEY,              XK_h,      incrgaps,       {.i = +1 } },
+	{ Mod1Mask|MODKEY,              XK_l,      incrgaps,       {.i = -1 } },
+	{ Mod1Mask|ShiftMask,           XK_h,      incrogaps,      {.i = +1 } },
+	{ Mod1Mask|ShiftMask,           XK_l,      incrogaps,      {.i = -1 } },
+	{ Mod1Mask|ControlMask,         XK_h,      incrigaps,      {.i = +1 } },
+	{ Mod1Mask|ControlMask,         XK_l,      incrigaps,      {.i = -1 } },
+	{ Mod1Mask,                     XK_0,      togglegaps,     {0} },
+	{ Mod1Mask|ShiftMask,           XK_0,      defaultgaps,    {0} },
+	{ Mod1Mask,                     XK_y,      incrihgaps,     {.i = +1 } },
+	{ Mod1Mask,                     XK_o,      incrihgaps,     {.i = -1 } },
+	{ Mod1Mask|ControlMask,         XK_y,      incrivgaps,     {.i = +1 } },
+	{ Mod1Mask|ControlMask,         XK_o,      incrivgaps,     {.i = -1 } },
+	{ Mod1Mask|MODKEY,              XK_y,      incrohgaps,     {.i = +1 } },
+	{ Mod1Mask|MODKEY,              XK_o,      incrohgaps,     {.i = -1 } },
+	{ Mod1Mask|ShiftMask,           XK_y,      incrovgaps,     {.i = +1 } },
+	{ Mod1Mask|ShiftMask,           XK_o,      incrovgaps,     {.i = -1 } },
 	// Vanitygaps
 	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
