@@ -7,11 +7,11 @@ static const unsigned int gappih    = 15;       /* horiz inner gap between windo
 static const unsigned int gappiv    = 15;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 15;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 15;       /* vert outer gap between windows and screen edge */
-static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
+static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Noto Serif CJK:size=12:type=Regular:antialias=true:autohint=true" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "Noto Sans CJK TC:size=13:type=Regular:antialias=true:autohint=true" };
+static const char dmenufont[]       = "Noto Sans CJK TC:size=13";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -24,7 +24,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "八", "九" };
 
 static const Rule rules[] = {
 	/* xprop(1):
